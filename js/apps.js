@@ -8,6 +8,19 @@ const loading = async (searchText) =>{
 const DisplayPhones = phones =>{
 const displayContainer = document.getElementById('phones-container')
 displayContainer.innerHTML =``;
+// only display 0 to 21 phones 
+phones = phones.slice(0, 21)
+
+// display not found phones start
+const noPhone = document.getElementById('notFound-message')
+if(phones.length === 0){
+
+   noPhone.classList.remove('d-none')
+}
+else{
+  noPhone.classList.add('d-none')
+}
+// display not found phones end
 for(phone of phones){
 console.log(phone)
   const DivContainer = document.createElement('div')

@@ -4,25 +4,90 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
     <!-- bootstrap link  -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- font awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
     <title>Phones Hunter</title>
 </head>
-<body>
+<body class="bg-light">
     <header class="container">
         <h1 class="text-warning text-center py-3 fs-3">Welcome To My Phones Hunters !!</h1>
         <section class="container my-3">
-            <input type="text" placeholder="Search Your Favourite Phones" class="py-1 ps-3 w-25 shadow-lg border-0" id="search-field">
+            <input type="text" placeholder="Search Your Favourite Phones" class="py-2 ps-3 w-25 shadow-lg border-0" id="search-field">
             <button onclick="searchphone()" class="btn btn-outline-warning ms-2"> Search </button>
         </section>
     </header>
-    <main>
+    <main class="mb-5">
         <section class="container">
             <div id="phones-container" class="row row-cols-1 row-cols-md-3 g-4">
                    
              </div>
+             <div class="d-none" id="notFound-message">
+                <h3 class="text-center text-warning mt-4 fs-5 fw-normal">Not found Phones Please try again</h3>
+             </div>
         </section>
     </main>
+
+    <!-- footer code start -->
+		<footer class="footer-distributed container-fluid">
+ 
+			<div class="footer-left">
+ 
+				<h3>It <span>Solutions </span></h3>
+ 
+				<p class="footer-links">
+					<a href="#">Home</a>
+					·
+					<a href="#">Blog</a>
+					·
+					<a href="#">Pricing</a>
+					·
+					<a href="#">About</a>
+					·
+					<a href="#">Faq</a>
+					·
+					<a href="#">Contact</a>
+				</p>
+ 
+				<p class="footer-company-name">It Solutions ltd &copy; 2023</p>
+			</div>
+ 
+			<div class="footer-center">
+ 
+				<div>
+					<i class="fa fa-map-marker"></i>
+					<p><span>2100 Tomaltola</span> Jamalpur, Bangladesh</p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>+1 555 123456</p>
+				</div>
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:support@company.com">contact subahan@gmail.com</a></p>
+				</div>
+			</div>
+			<div class="footer-right">
+				<p class="footer-company-about">
+					<span>About the company</span>
+					Apple and Sumsang is a Multinational Company for Mobile, Hard Disk and Memory Chip &amp; SEO Learner.
+				</p>
+				<div class="footer-icons">
+					<a href="#"><i class="fa-brands fa-facebook"></i></a>
+					<a href="#"><i class="fa-brands fa-twitter"></i></a>
+					<a href="#"><i class="fa-brands fa-linkedin"></i></a>
+					<a href="#"><i class="fa-brands fa-github"></i></a>
+				</div>
+			</div>
+		</footer>
+    <!-- footer code end -->
     <!-- javaScript link  -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="js/apps.js"></script>
