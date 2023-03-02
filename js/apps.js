@@ -36,13 +36,27 @@ console.log(phone)
   `
   displayContainer.appendChild(DivContainer)
 }
+// stop loading 
+  loadingSping(false)
 }
 
 // for each search items 
 var searchphone = () =>{
   var SearchField = document.getElementById('search-field')
+  // start loading 
+     loadingSping(true)
     var searchText = SearchField.value ;
     loading(searchText) 
     SearchField.value = '';
 }
-// loading()
+// toogle button 
+const loadingSping = isloading =>{
+
+  const toggleSection = document.getElementById('toggle-btn')
+  if(isloading){
+    toggleSection.classList.remove('d-none')
+  }
+  else{
+    toggleSection.classList.add('d-none')
+  }
+}
