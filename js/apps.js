@@ -40,6 +40,7 @@ console.log(phone)
       <div class="card-body">
       <h5 class="card-title">${phone.phone_name} </h5>
       <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <button  type="button" onclick="LoadingDetails('${phone.slug}')" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Show Details</button>
      </div>
  </div>
   `
@@ -79,3 +80,27 @@ const loadingSping = isloading =>{
 document.getElementById('show-all-btn').addEventListener('click', function(){
    showprocess()
 })
+
+
+// show phone informations details
+ const LoadingDetails = (id) =>{
+  const url = `https://openapi.programming-hero.com/api/phone/${id}`
+  fetch(url)
+  .then(res =>res.json())
+  .then(data => displayphoneDetails(data.data))
+ }
+
+const displayphoneDetails = phone =>{
+  console.log(phone)
+  const modalTile = document.getElementById('exampleModalLabel')
+  modalTile.innerText = phone.name;
+  const modalBody = document.getElementById('phone-body')
+  modalBody.innerHTML = `
+  <p> Memory Info: ${phone.mainFeatures.memory ? phone.mainFeatures.memory : 'not information'} </p>
+  <p> Chipset Info: ${phone.mainFeatures.chipSet ? phone.mainFeatures.chipSet : 'not information'} </p>
+  <p> Display Info: ${phone.mainFeatures.displaySize} </p>
+  <p> Bluetooth Info: ${phone.others.Bluetooth} </p>
+  <p> GPS Info: ${phone.others.GPS} </p>
+  <p> WLAN Info: ${phone.others.WLAN} </p>
+  `
+}
